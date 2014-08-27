@@ -1,0 +1,7 @@
+<div>
+    <ul class="tabs-header" ng-transclude></ul>
+    <div class="tab-contents">
+        <div class="tab" ng-repeat="tab in tabs" ng-class="{selected: tab.active}" tab-content-transclude="tab">
+        </div>
+    </div>
+</div>

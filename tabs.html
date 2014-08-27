@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <style>
+    .body {
+        box-sizing: border-box !important;
+    }
+    .tabs-header {
+        position: relative;
+        list-style: none;
+        margin: 0px;
+        padding: 0;
+        /*text-align: center;*/
+    }
+    .tabs-header li {
+        position: relative;
+        display: inline-block;
+        font-size: 18px;
+        margin: 0 1px;
+        cursor: pointer;
+        z-index: 0;
+        border: 1px solid #ECECEC;
+        background: #ECECEC;
+        border-top-right-radius: 2px;
+        border-top-left-radius: 2px;
+    }
+    .tabs-header li > a {
+        position: relative;
+        padding: 8px 15px;
+        display: block;
+    }
+    .tabs-header li.selected {
+        z-index: 2;
+        border-bottom: 1px solid white;
+        background: #fff;
+        color: black;
+        font-weight: bold;
+    }
+    .tabs-header:after {
+        position: absolute;
+        width: 100%;
+        content: "";
+        border-bottom: 1px solid #ECECEC;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+    }
+    .tab-contents {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .tab {
+        width: 100%;
+        display: none;
+    }
+    .tab.selected {
+        display: block;
+    }
+    .container {
+        position: relative;
+        margin: 10px auto;
+        width: 700px;
+        padding: 10px;
+        border: 1px solid #cecece;
+        display: block;
+    }
+    .myclass {
+        padding: 20px;
+        margin: 10px;
+        border: 1px solid red;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <tabset>
+            <tab>
+                <tab-heading><i class="glyphicon glyphicon-bell"></i>parin</tab-heading>
+                <b>First tab</b>
+                <div class="myclass">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eos inventore autem voluptas est id. Consequuntur, quidem delectus totam quo autem dignissimos eligendi aliquid eum dolorem distinctio. Ad, corporis, hic?
+                </div>
+            </tab>
+            <tab>
+                <tab-heading><i class="glyphicon glyphicon-bell"></i>mayur</tab-heading>
+                <b>second tab</b>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero velit eaque corrupti tenetur ratione veniam recusandae culpa, consectetur adipisci ab labore incidunt officia quidem, repudiandae ipsam? Dolorem quasi ab est.
+            </tab>
+            <tab heading="third tab">
+                <b>third tab</b>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero velit eaque corrupti tenetur ratione veniam recusandae culpa, consectetur adipisci ab labore incidunt officia quidem, repudiandae ipsam? Dolorem quasi ab est.
+            </tab>
+        </tabset>
+
+    </div>
+    <script src="angular.min.js"></script>
+    <script src="tabs.js"></script>
+    <script>
+    angular.module('app', ["Bhrahma.tabs"]);
+    </script>
+</body>
+
+</html>
